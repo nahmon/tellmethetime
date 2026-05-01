@@ -8,7 +8,12 @@ describe('formatKoreanTime', () => {
 
   it('자정(0시)을 처리한다', () => {
     const date = new Date('2026-04-30T00:05:00');
-    expect(formatKoreanTime(date)).toBe('0시 5분');
+    expect(formatKoreanTime(date)).toBe('12시 5분');
+  });
+
+  it('정오(12시)를 처리한다', () => {
+    const date = new Date('2026-04-30T12:30:00');
+    expect(formatKoreanTime(date)).toBe('12시 30분');
   });
 
   it('정각(00분)을 처리한다', () => {

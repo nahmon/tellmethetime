@@ -1,6 +1,6 @@
 export function formatKoreanTime(date: Date): string {
   const hours24 = date.getHours();
-  const hours = hours24 % 12;
+  const hours = hours24 % 12 || 12;
   const minutes = date.getMinutes();
   return `${hours}시 ${minutes}분`;
 }
